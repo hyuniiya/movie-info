@@ -1,7 +1,16 @@
 <template>
-  <h1>Hello Vue</h1>
+  <Navbar />
+  <MovieList />
 </template>
+<script>
+import Navbar from "./components/Navbar.vue";
+import MovieList from "./components/MovieList.vue";
+export default {
+  name: "App",
 
-<script></script>
-
-<style></style>
+  components: {
+    Navbar: Navbar,
+    MovieList: MovieList,
+  },
+};
+</script>

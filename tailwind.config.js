@@ -1,12 +1,16 @@
-import type { Config } from "tailwindcss";
+import { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
   content: [
+    "./index.html",
+    "./src/**/*.{vue,js,ts,jsx,tsx}",
     "./pages/**/*.{ts,tsx,js,jsx}",
     "./components/**/*.{ts,tsx,js,jsx}",
     "./app/**/*.{ts,tsx,js,jsx}",
     "./src/**/*.{ts,tsx,js,jsx}",
+    "node_modules/flowbite-vue/**/*.{js,jsx,ts,tsx,vue}",
+    "node_modules/flowbite/**/*.{js,jsx,ts,tsx}",
   ],
   prefix: "",
   theme: {
@@ -14,9 +18,7 @@ const config = {
       center: true,
       padding: "2rem",
       screens: {
-        tablet: { raw: "(max-width: 1024px)" },
-        mini: { raw: "(max-width: 768px)" },
-        mobile: { raw: "(max-width: 450px)" },
+        "2xl": "1400px",
       },
     },
     extend: {
@@ -77,6 +79,6 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config;
+};
 
 export default config;
